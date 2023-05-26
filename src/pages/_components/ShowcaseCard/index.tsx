@@ -16,7 +16,6 @@ import { sortBy } from "@site/src/utils/jsUtils";
 import Heading from "@theme/Heading";
 import Tooltip from "../ShowcaseTooltip";
 import styles from "./styles.module.css";
-import { updateCopyCount } from "@site/src/api";
 
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
@@ -86,14 +85,8 @@ function ShowcaseCard({ user, isDescription, copyCount, onCopy }) {
 
   const handleCopyClick = useCallback(async () => {
     try {
-      const updatedCount = await updateCopyCount(user.id);
-      if (user.description) {
-        copy(userDescription);
-      }
       setShowCopied(true);
       setTimeout(() => setShowCopied(false), 2000);
-      // Notify parent component to update the copy count
-      onCopy(user.id, updatedCount);
     } catch (error) {
       console.error("Error updating copy count:", error);
     }

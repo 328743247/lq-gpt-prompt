@@ -33,7 +33,6 @@ import ShowcaseFilterToggle, {
 } from "./_components/ShowcaseFilterToggle";
 import ShowcaseTooltip from "./_components/ShowcaseTooltip";
 import ShowcaseCard from "./_components/ShowcaseCard";
-import { fetchAllCopyCounts } from "../api";
 
 import styles from "./styles.module.css";
 
@@ -141,6 +140,7 @@ function ShowcaseHeader() {
     <section className="margin-top--lg margin-bottom--lg text--center">
       <Heading as="h1">ChatGPT Prompts</Heading>
       <p>{DESCRIPTION}</p>
+      <script type="text/javascript" src="//js.users.51.la/21661991.js"></script>
       {/*<Link className="button button--primary" to={SUBMIT_URL}>
         <Translate id="showcase.header.button">🙏 请添加你的提示词</Translate>
       </Link>*/}
@@ -324,12 +324,6 @@ function ShowcaseCards({ isDescription }) {
   const [copyCounts, setCopyCounts] = useState({});
 
   useEffect(() => {
-    const fetchData = async () => {
-      const counts = await fetchAllCopyCounts();
-      setCopyCounts(counts);
-    };
-  
-    fetchData();
   }, []);
 
   const handleCardCopy = useCallback((cardId, updatedCount) => {
