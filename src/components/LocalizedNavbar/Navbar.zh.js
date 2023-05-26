@@ -1,9 +1,9 @@
 const zhNavbar = {
   hideOnScroll: true,
-  title: "ChatGPT SC",
+  title: "",
   logo: {
-    alt: "ChatGPT Shortcuts",
-    src: "img/logo.svg",
+    alt: "AiAsker",
+    src: "img/img.png",
   },
   items: [
     {
