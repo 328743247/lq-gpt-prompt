@@ -34,11 +34,11 @@ export default function NotFound() {
                 <button className="homepage">
                   <a href="/">Back to home</a>
                 </button>
-                <button className="homepage">
+               {/* <button className="homepage">
                   <a href="https://github.com/rockbenben/ChatGPT-Shortcut/issues/new?assignees=rockbenben&labels=bug&template=bug-report.yml&title=%5BBug%5D">
                     Report this bug
                   </a>
-                </button>
+                </button>*/}
               </p>
               <p align="center">
                 <img
